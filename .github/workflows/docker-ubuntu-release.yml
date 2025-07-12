@@ -6,6 +6,11 @@ on:
 jobs:
   docker-publish:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - arch: aarch64
+          - arch: amd64
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v2
