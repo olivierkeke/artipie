@@ -18,7 +18,7 @@ jobs:
         with:
           java-version: 21
           distribution: adopt
-      - uses: actions/cache@v1
+      - uses: actions/cache@v4
         with:
           path: ~/.m2/repository
           key: ${{ runner.os }}-jdk-21-maven-${{ hashFiles('**/pom.xml') }}
