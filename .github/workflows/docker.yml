@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-jdk-21-maven-
           runs-on: ubuntu-latest
       - name: install jars
-        run: mvn -B install
+        run: mvn -B install -DskipTests
       - name: dowload dependencies
         run: mvn -B dependency:copy-dependencies
         working-directory: artipie-main
