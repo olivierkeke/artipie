@@ -58,7 +58,7 @@ jobs:
           context: artipie-main
           load: true
           tags: ${{ env.TEST_TAG }}
-          build-args: JAR_FILE=atipie-main-*.jar
+          build-args: JAR_FILE=artipie-main-1.0-SNAPSHOT.jar
       - name: Test
         run: |
           docker run --rm ${{ env.TEST_TAG }}
@@ -70,4 +70,4 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: JAR_FILE=atipie-main-*.jar
+          build-args: JAR_FILE=artipie-main-1.0-SNAPSHOT.jar
