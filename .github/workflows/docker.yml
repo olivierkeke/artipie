@@ -35,6 +35,9 @@ jobs:
       - name: dowload dependencies
         run: mvn -B dependency:copy-dependencies
         working-directory: artipie-main
+      - name: check files presence
+        run: ls target
+        working-directory: artipie-main
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
